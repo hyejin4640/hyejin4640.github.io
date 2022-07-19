@@ -36,7 +36,7 @@ header {
   align-items: center;
   color: #fff;
   border-radius: 10px;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   background-color: #000;
