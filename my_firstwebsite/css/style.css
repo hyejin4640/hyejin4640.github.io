@@ -1,0 +1,447 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Nuosu+SIL&family=Oswald:wght@200;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Monoton&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&family=Sunflower&display=swap");
+
+html { 
+  scroll-behavior: smooth; 
+} 
+body {
+  width: 100vw;
+  font-weight: bold;
+  background-color: #000;
+  overflow-x:hidden;
+}
+#wrap {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+
+/****************** header ********************/
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #000;
+}
+/* 메뉴 */
+.gnb {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+.gnb .logo {
+  font-size: 4.5rem;
+  color: seagreen;
+}
+.gnb .logo:hover {
+  transform: scale(120%);
+}
+.gnb nav .a_list a {
+  box-sizing: border-box;
+  display: inline-block;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  font-size: 2.6rem;
+}
+/* 메뉴 hover */
+.gnb nav a:hover {
+  background-color: rgb(18, 99, 53);
+  color: #000;
+  border-radius: 0.3rem;
+}
+/* small_menu */
+nav input[id="menu_btn"] {
+  display: none;
+} 
+nav input[id="menu_btn"] + label[for="menu_btn"] {
+  display: block;
+  width: 35px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+nav input[id="menu_btn"] + label[for="menu_btn"] p {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #fff;
+  position: absolute;
+}
+nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(2) {
+  top: 50%;
+  left: 0;
+}
+nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(3) {
+  top: 100%;
+  left: 0;
+}
+
+
+
+/* 배너 */
+.benner {
+  box-sizing: border-box;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.benner .character_text {
+ 
+  padding-left: 4rem;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+  animation: character_text;
+  animation-duration: 1s;
+}
+.character {
+  width: 500px;
+  height: 480px;
+  display: block;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 8px solid rgb(209, 208, 208); */
+  position: relative;
+  animation: bounce;
+  animation-duration: 1s;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.character::after {
+  content: "";
+  width: 500px;
+  height: 480px;
+  background-color: rgb(12, 80, 41);
+  position: absolute;
+  top: 480px;
+  left: 0;
+  transition: 1s;
+}
+.character:hover:after {
+  top: 0;
+  left: 0;
+}
+.character img {
+  z-index: 1;
+}
+.benner .character_text h1 {
+  font-size: 5rem;
+  padding-bottom: 5%;
+}
+.benner .character_text p {
+  font-size: 3rem;
+  padding-bottom: 2%;
+}
+.benner .character_text:hover {
+  color: rgb(18, 99, 53);
+}
+
+.scroll {
+  background-color: #000;
+  color: rgb(238, 237, 237);
+  /* border: 8px solid seagreen; */
+  border: 0.2rem solid transparent;
+  background-image: linear-gradient(#000, #000),
+    linear-gradient(to bottom, rgb(12, 92, 46), seagreen, #222);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  font-size: 2.7rem;
+  border-radius: 1rem;
+  padding: 0.6rem;
+  position: absolute;
+  bottom: 3rem;
+}
+.scroll:hover {
+  transform: scale(115%);
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    left: -500px;
+    transform: rotate(0);
+  }
+  100% {
+    left: 0;
+    transform: rotate(360deg);
+  }
+}
+ 
+@keyframes character_text {
+  0% {
+    opacity: 0;
+    right: -800px;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+
+
+/******************** main ***************** */
+/* skill *************** */
+
+#skill {
+  width: 70%;
+  margin: 10rem auto;
+  padding: 8rem;
+  display: flex;
+  align-items: center;
+  background-color: rgb(15, 82, 44);
+  border-radius: 5rem;
+}
+.skill_detail {
+  width: 50%;
+}
+.skill_name {
+  width: 50%;
+  font-size: 8rem;
+  text-align: center;
+  color: #fff;
+}
+.skill_text {
+  width: 100%;
+  line-height: 3.6rem;
+  font-family: "Sunflower", sans-serif;
+  font-size: 2.6rem;
+  color: #fff;
+}
+.skill_text p {
+  color: #000;
+}
+
+.skill_icon {
+  color: #fff;
+  padding-top: 3rem;
+  line-height: 4rem;
+  font-size: 2.6rem;
+  font-family: "Sunflower", sans-serif;
+}
+
+.full_slide > img {
+  border: 1px solid #000;
+}
+
+/* work**************************/
+input[name="tab"] {
+  display: none;
+}
+
+.work .work_btn label {
+  display: inline-block;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: linen;
+  margin: 10px 5px;
+}
+input[id="tab1"]:checked ~ .work_detail .work_btn label[for="tab1"],
+input[id="tab2"]:checked ~ .work_detail .work_btn label[for="tab2"],
+input[id="tab3"]:checked ~ .work_detail .work_btn label[for="tab3"] {
+  background-color: rgb(154, 103, 236);
+}
+.work {
+  background-color: rgb(45, 45, 170);
+  border-radius: 5rem;
+  width: 70%;
+  margin: 10rem auto;
+  padding: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.work .work_name {
+  width: 50%;
+  font-size: 7rem;
+  color: #fff;
+}
+.work .work_detail {
+  width: 50%;
+  min-width: 500px;
+}
+
+.work .work_slide {
+  width: 500px;
+  height: 410px;
+  overflow: hidden;
+  position: relative;
+}
+
+.work .work_slide .work_fullslide {
+  display: flex;
+  width: 1500px;
+  height: 410px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.work .work_slide .work_fullslide img {
+  border-radius: 5rem;
+}
+.work .work_detail .work_btn {
+  width: 50%;
+  margin: 0 auto;
+}
+
+input[id="tab2"]:checked ~  .work_detail .work_slide .work_fullslide {
+  top: 0;
+  left: -100%;
+}
+
+input[id="tab3"]:checked ~   .work_detail .work_slide .work_fullslide {
+  top: 0;
+  left: -200%;
+}
+
+/* portfolio*************** */
+#portfolio {
+  width: 80%;
+  margin: 10rem auto 0;
+}
+.portfolio_name {
+  width: 100%;
+  height: 30rem;
+  font-size: 8rem;
+  background-color: rgb(5, 78, 56);
+  color: #fff;
+  text-align: center;
+  line-height: 30rem;
+}
+#portfolio_detail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(45, 45, 170); */
+}
+#portfolio_detail .portfolio_left {
+  width: 50%;
+}
+#portfolio_detail .portfolio_left div {
+  height: 60rem;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#portfolio_detail .portfolio_left div:nth-child(1) {
+  background-color: tomato;
+}
+#portfolio_detail .portfolio_left div:nth-child(2) {
+  background-color: rgb(0, 163, 255);
+}
+#portfolio_detail .portfolio_left div:nth-child(3) {
+  background-color:  rgb(57, 170, 85);
+}
+#portfolio_detail .portfolio_right {
+  background-color: #fff;
+  width: 50%;
+}
+#portfolio_detail .portfolio_right a {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/******************** footer ****************/
+.contact_wrap{
+  width: 80%;
+  margin: 10rem auto;
+}
+.contact{
+  width: 100%;
+  padding: 10rem;
+  box-sizing: border-box;
+  /* border-radius: 50px; */
+  position: relative;
+  background: linear-gradient(90deg,rgb(254, 54, 19) 70%,rgb(108, 19, 254) 20%);
+}
+.contact input,textarea{
+  outline: none;
+  background-color:rgb(254, 54, 19) ;
+  border: none;
+  border-bottom:1px solid #000;
+  color: #000;
+  }
+.contact_name{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 8rem;
+}
+
+.contact p{
+  font-size: 3rem;
+  margin: 1rem;
+}
+.contact form label{
+font-size: 2.5rem;
+}
+form{
+  margin: 3rem ;
+}
+.button button{
+  margin: 2rem;
+  background-color: #000;
+  color: #fff;
+  width: 20%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.contact_inponame{
+  font-size: 3rem;
+}
+.contact_inpo{
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 30%;
+  right:15% ;
+  width: 20%;
+  background-color: rgb(3, 0, 1);
+  color: #fff;
+  padding: 5rem;
+}
+
+.contact_icon i{
+  position: relative;
+  color: #fff;
+  font-size: 2.5rem;
+  width: 15%;
+}
+footer #up {
+  font-size: 50px;
+  color: #fff;
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+}

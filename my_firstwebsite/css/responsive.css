@@ -1,0 +1,178 @@
+@charset 'utf-8';
+
+@media screen and (max-width: 790px) {
+  .gnb {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  nav input[id="menu_btn"] + label[for="menu_btn"] {
+    display: block;
+    right: 1rem;
+  }
+  nav {
+    position: relative;
+  }
+  nav input[id="menu_btn"]:checked ~ .a_list {
+    display: block;
+    top: 30px;
+    right: 0;
+  }
+
+  nav .a_list {
+    display: none;
+    position: absolute;
+    border: 5px solid seagreen;
+  }
+  .gnb nav .a_list a {
+    font-size: 2.2rem;
+  }
+  .benner {
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .benner .character img {
+    width: 240px;
+    height: 280px;
+  }
+  .benner .character {
+    width: 360px;
+    height: 360px;
+
+  }
+  .benner .character_text{
+    margin-top: 3rem;
+  }
+  .benner .character_text h1 {
+    font-size: 4rem;
+  }
+  .benner .character_text p {
+    font-size: 3rem;
+  }
+  .scroll {
+    font-size: 2.4rem;
+  }
+  /*********** main *****************/
+/***** skill***** */
+  #skill {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* margin: 10rem auto; */
+    padding: 0;
+  }
+  .skill_name {
+    margin: 5rem;
+    font-size: 6rem;
+  }
+
+  .skill_icon img {
+    width: 5.7rem;
+    height: 5.7rem;
+  }
+  /***8* work ****/
+  .work {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto;
+    padding: 0;
+  }
+  .work .work_name {
+    margin: 5rem;
+    font-size: 6rem;
+  }
+  .work .work_detail {
+    width: 50%;
+    min-width: 400px;
+  }
+  .work .work_slide {
+    width: 400px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .work .work_slide .work_fullslide {
+    display: flex;
+    width: 1200px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+
+  .work .work_slide .work_fullslide img {
+    width: 400px;
+    height: 350px;
+  }
+  /*** portfolio  *****/
+  .portfolio_name {
+    font-size: 7rem;
+    width: 100%;
+  }
+  #portfolio_detail {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #portfolio_detail .portfolio_left {
+    width: 100%;
+  }
+  #portfolio_detail .portfolio_left div {
+    height: 40rem;
+    font-size: 4rem;
+  }
+  #portfolio_detail .portfolio_right {
+    background-color: #fff;
+    width: 100%;
+  }
+  #portfolio_detail .portfolio_right a img{
+    width: 100%;
+  }
+  footer #up {
+    font-size: 50px;
+    color: #fff;
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+  }
+ /******************* footer*********** */
+.contact{
+  width: 100%;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+.contact_name{
+  font-size: 7rem;
+}
+.contact_inpo{
+ display: none;
+}
+.button button{
+  width: 30%;
+}
+}
+@media screen and (max-width:320px){
+  .benner .character img {
+    width: 160px;
+    height: 180px;
+  }
+  .benner .character {
+    width: 240px;
+    height: 240px;
+  }
+  .benner .character_text h1 {
+    font-size: 2.8rem;
+  }
+  .benner .character_text p {
+    font-size: 2rem;
+  }
+}
