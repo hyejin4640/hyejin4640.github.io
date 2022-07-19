@@ -160,14 +160,14 @@
   width: 30%;
 }
 }
-@media screen and (max-width:320px){
+@media screen and (max-width:360px){
   .benner .character img {
-    width: 160px;
-    height: 180px;
+    width: 120px;
+    height: 140px;
   }
   .benner .character {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 220px;
   }
   .benner .character_text h1 {
     font-size: 2.8rem;
