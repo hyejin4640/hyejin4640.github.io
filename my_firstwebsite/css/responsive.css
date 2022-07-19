@@ -162,8 +162,8 @@
 }
 @media screen and (max-width:400px){
   .benner .character img {
-    width: 120px;
-    height: 140px;
+    width: 140px;
+    height: 160px;
   }
   .benner .character {
     width: 200px;
