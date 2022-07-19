@@ -160,19 +160,115 @@
   width: 30%;
 }
 }
-@media screen and (max-width:400px){
+
+
+
+
+@media screen and (max-width:360px){
   .benner .character img {
-    width: 140px;
-    height: 160px;
+    width: 160px;
+    height: 180px;
   }
   .benner .character {
-    width: 200px;
-    height: 220px;
+    width: 230px;
+    height: 240px;
   }
   .benner .character_text h1 {
     font-size: 2.8rem;
   }
   .benner .character_text p {
     font-size: 2rem;
+  }
+/* work**** */
+.work {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 10rem auto;
+  padding: 0;
+}
+.work .work_name {
+  margin: 3rem;
+  font-size: 4rem;
+}
+.work .work_detail {
+  width: 50%;
+  min-width: 200px;
+}
+  .work .work_slide {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .work .work_slide .work_fullslide {
+    display: flex;
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  .work .work_btn label {
+    display: inline-block;
+    width: 3rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: linen;
+    margin: 5px 0;
+  }
+  .work .work_slide .work_fullslide img {
+    width: 200px;
+    height: 200px;
+  }
+  /* portfolio*** */
+  .portfolio_name {
+    font-size: 5rem;
+    width: 100%;
+  }
+  #portfolio_detail {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #portfolio_detail .portfolio_left {
+    width: 100%;
+  }
+  #portfolio_detail .portfolio_left div {
+    height: 40rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  #portfolio_detail .portfolio_right {
+    background-color: #fff;
+    width: 100%;
+  }
+  #portfolio_detail .portfolio_right a img{
+    width: 100%;
+  }
+  footer #up {
+    font-size: 50px;
+    color: #fff;
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+  }
+  /* footer */
+  .contact{
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .contact_name{
+    font-size: 5rem;
+  }
+  .contact_inpo{
+   display: none;
+  }
+  .button button{
+    width: 60%;
   }
 }
