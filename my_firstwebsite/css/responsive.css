@@ -16,8 +16,8 @@
   }
   nav input[id="menu_btn"]:checked ~ .a_list {
     display: block;
-    width: 90%;
-    height: 90vh;
+    /* width: 90%;
+    height: 90vh; */
     top: 30px;
     right: 0;
   }
