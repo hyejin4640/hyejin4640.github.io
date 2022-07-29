@@ -178,14 +178,10 @@
   /* skill */
   #skill {
     width: 90%;
-    display: flex;
-    flex-direction: column;
-    /* margin: 10rem auto; */
-    padding: 0;
   }
   .skill_name {
-    margin: 5rem;
-    font-size: 6rem;
+    margin: 3rem;
+    font-size: 5rem;
   }
 
   .skill_icon img {
