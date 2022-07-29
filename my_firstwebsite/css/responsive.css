@@ -1,34 +1,70 @@
 @charset 'utf-8';
 
 @media screen and (max-width: 790px) {
-  /* headeer */
-  .gnb {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  nav input[id="menu_btn"] + label[for="menu_btn"] {
-    display: block;
-    right: 1rem;
-  }
-  nav {
-    position: relative;
-  }
-  nav input[id="menu_btn"]:checked ~ .a_list {
-    display: block;
-    /* width: 90%;
-    height: 90vh; */
-    top: 30px;
-    right: 0;
-  }
-  nav .a_list {
+  /*****headeer ********/
+  /* gnb */
+  .gnb .logo {
     display: none;
+  }
+  .gnb nav {
+    position: relative;
+    width: 100%;
+  }
+  .gnb nav input[id="menu_btn"] + label[for="menu_btn"] {
+    display: block;
+    cursor: pointer;
+    left: 10px;
+  }
+  .gnb nav .a_list {
     position: absolute;
-    border: 5px solid seagreen;
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    left: -300%;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  .gnb nav input[id="menu_btn"]:checked ~ .a_list {
+    top: 40px;
+    left: 0;
   }
   .gnb nav .a_list a {
     font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 2rem;
+    color: #fff;
+    background-color: rgb(12, 80, 41);
   }
+  .gnb nav input[id="menu_btn"] + label[for="menu_btn"] p {
+    transition: 0.3s;
+  }
+  .gnb
+    nav
+    input[id="menu_btn"]:checked
+    + label[for="menu_btn"]
+    > p:nth-child(1) {
+    transform: rotate(45deg);
+    top: 100%;
+  }
+  .gnb
+    nav
+    input[id="menu_btn"]:checked
+    + label[for="menu_btn"]
+    > p:nth-child(2) {
+    display: none;
+  }
+  .gnb
+    nav
+    input[id="menu_btn"]:checked
+    + label[for="menu_btn"]
+    > p:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 100%;
+  }
+  /* benner */
   .benner {
     box-sizing: border-box;
     width: 100%;

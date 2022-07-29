@@ -47,7 +47,7 @@ header {
 .gnb .logo:hover {
   transform: scale(120%);
 }
-.gnb nav .a_list a {
+nav .a_list a {
   box-sizing: border-box;
   display: inline-block;
   color: #fff;
@@ -61,10 +61,10 @@ header {
   border-radius: 0.3rem;
 }
 /* small_menu */
-nav input[id="menu_btn"] {
+.gnb nav input[id="menu_btn"] {
   display: none;
 }
-nav input[id="menu_btn"] + label[for="menu_btn"] {
+.gnb nav input[id="menu_btn"] + label[for="menu_btn"] {
   display: block;
   width: 35px;
   height: 20px;
@@ -72,21 +72,21 @@ nav input[id="menu_btn"] + label[for="menu_btn"] {
   cursor: pointer;
   display: none;
 }
-nav input[id="menu_btn"] + label[for="menu_btn"] p {
+.gnb nav input[id="menu_btn"] + label[for="menu_btn"] p {
   width: 100%;
   height: 0.2rem;
   background-color: #fff;
   position: absolute;
 }
-nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(1) {
+.gnb nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(1) {
   top: 0;
   left: 0;
 }
-nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(2) {
+.gnb nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(2) {
   top: 50%;
   left: 0;
 }
-nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(3) {
+.gnb nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(3) {
   top: 100%;
   left: 0;
 }
