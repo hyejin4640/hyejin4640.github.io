@@ -179,14 +179,28 @@
   #skill {
     width: 90%;
   }
+  .skill_detail {
+    width: 90%;
+  }
   .skill_name {
     margin: 3rem;
-    font-size: 5rem;
+    font-size: 4rem;
   }
-
+  .skill_text {
+    line-height: 3rem;
+  }
+  .skill_text p {
+    font-size: 2.2rem;
+  }
+  .skill_text h1 {
+    font-size: 2.5rem;
+  }
   .skill_icon img {
-    width: 5.7rem;
-    height: 5.7rem;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .skill_icon h1 {
+    font-size: 2.4rem;
   }
   /* work**** */
   .work {

@@ -2,21 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Nuosu+SIL&family=Oswald:wght@200;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Monoton&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&family=Sunflower&display=swap");
 
-html { 
-  scroll-behavior: smooth; 
-} 
+html {
+  scroll-behavior: smooth;
+}
 body {
   width: 100vw;
   font-weight: bold;
   background-color: #000;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 #wrap {
   width: 100%;
   box-sizing: border-box;
   background-color: #000;
 }
-
 
 /****************** header ********************/
 header {
@@ -64,7 +63,7 @@ header {
 /* small_menu */
 nav input[id="menu_btn"] {
   display: none;
-} 
+}
 nav input[id="menu_btn"] + label[for="menu_btn"] {
   display: block;
   width: 35px;
@@ -92,8 +91,6 @@ nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(3) {
   left: 0;
 }
 
-
-
 /* 배너 */
 .benner {
   box-sizing: border-box;
@@ -102,11 +99,9 @@ nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(3) {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .benner .character_text {
- 
   padding-left: 4rem;
   box-sizing: border-box;
   color: #fff;
@@ -189,7 +184,7 @@ nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(3) {
     transform: rotate(360deg);
   }
 }
- 
+
 @keyframes character_text {
   0% {
     opacity: 0;
@@ -200,8 +195,6 @@ nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(3) {
     right: 0;
   }
 }
-
-
 
 /******************** main ***************** */
 /* skill *************** */
@@ -242,7 +235,6 @@ nav input[id="menu_btn"] ~ label[for="menu_btn"] p:nth-child(3) {
   font-size: 2.6rem;
   font-family: "Sunflower", sans-serif;
 }
-
 .full_slide > img {
   border: 1px solid #000;
 }
@@ -309,12 +301,12 @@ input[id="tab3"]:checked ~ .work_detail .work_btn label[for="tab3"] {
   margin: 0 auto;
 }
 
-input[id="tab2"]:checked ~  .work_detail .work_slide .work_fullslide {
+input[id="tab2"]:checked ~ .work_detail .work_slide .work_fullslide {
   top: 0;
   left: -100%;
 }
 
-input[id="tab3"]:checked ~   .work_detail .work_slide .work_fullslide {
+input[id="tab3"]:checked ~ .work_detail .work_slide .work_fullslide {
   top: 0;
   left: -200%;
 }
@@ -357,7 +349,7 @@ input[id="tab3"]:checked ~   .work_detail .work_slide .work_fullslide {
   background-color: rgb(0, 163, 255);
 }
 #portfolio_detail .portfolio_left div:nth-child(3) {
-  background-color:  rgb(57, 170, 85);
+  background-color: rgb(57, 170, 85);
 }
 #portfolio_detail .portfolio_right {
   background-color: #fff;
@@ -371,44 +363,48 @@ input[id="tab3"]:checked ~   .work_detail .work_slide .work_fullslide {
   align-items: center;
 }
 
-
 /******************** footer ****************/
-.contact_wrap{
+.contact_wrap {
   width: 80%;
   margin: 10rem auto;
 }
-.contact{
+.contact {
   width: 100%;
   padding: 10rem;
   box-sizing: border-box;
   /* border-radius: 50px; */
   position: relative;
-  background: linear-gradient(90deg,rgb(254, 54, 19) 70%,rgb(108, 19, 254) 20%);
+  background: linear-gradient(
+    90deg,
+    rgb(254, 54, 19) 70%,
+    rgb(108, 19, 254) 20%
+  );
 }
-.contact input,textarea{
+.contact input,
+textarea {
   outline: none;
-  background-color:rgb(254, 54, 19) ;
+  background-color: rgb(254, 54, 19);
   border: none;
-  border-bottom:1px solid #000;
+  border-bottom: 1px solid #000;
   color: #000;
-  }
-.contact_name{
+}
+.contact_name {
   width: 100%;
   margin: 0 auto;
   font-size: 8rem;
 }
 
-.contact p{
+.contact p {
   font-size: 3rem;
   margin: 1rem;
 }
-.contact form label{
-font-size: 2.5rem;
+.contact form label {
+  font-size: 2.5rem;
 }
-form{
-  margin: 3rem ;
+form {
+  margin: 3rem;
 }
-.button button{
+.button button {
   margin: 2rem;
   background-color: #000;
   color: #fff;
@@ -418,21 +414,21 @@ form{
   border-radius: 0.5rem;
 }
 
-.contact_inponame{
+.contact_inponame {
   font-size: 3rem;
 }
-.contact_inpo{
+.contact_inpo {
   border-radius: 0.5rem;
   position: absolute;
   top: 30%;
-  right:15% ;
+  right: 15%;
   width: 20%;
   background-color: rgb(3, 0, 1);
   color: #fff;
   padding: 5rem;
 }
 
-.contact_icon i{
+.contact_icon i {
   position: relative;
   color: #fff;
   font-size: 2.5rem;
