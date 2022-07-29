@@ -10,6 +10,7 @@
     position: absolute;
     display: block;
     right: 1rem;
+    /* top: px; */
     right: 20px;
   }
   nav {
@@ -177,7 +178,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 320px) {
   .benner .character img {
     width: 160px;
     height: 180px;
