@@ -107,21 +107,26 @@
           <div class="contact_name">CONTACT</div>
           <p>Thank you for wathing :)</p>
           <form class="gform" method="POST" data-email="bhyejin798@gmail.com" action="https://script.google.com/macros/s/AKfycbxGmGuXbnrg8A6DrIBlWa8M6_fs71ZiQup_ZtXrjU5t-sl1RxclhPCSDtMROhptk3_DZQ/exec">
+            <fieldset class="form-elements">
             <div>
               <label for="name">Name: </label>
-              <input type="text" id="name" />
+              <input type="text"  name="name" id="name" />
             </div>
             <div>
               <label for="mail">E-mail:</label>
-              <input type="email" id="mail" />
+              <input type="email" name="email" id="mail" />
             </div>
             <div>
               <label for="msg">Message</label>
-              <textarea id="msg"></textarea>
+              <textarea name="message" id="msg"></textarea>
             </div>
             <div class="button">
               <button type="submit">Send</button>
             </div>
+          </fieldset>
+          <div style="display:none" class="thankyou_message">
+            <p>메일이 성공적으로 전송되었습니다</p>
+          </div>
           </form>
           <div class="contact_inpo">
             <div class="contact_inponame">INPO</div>
@@ -136,6 +141,8 @@
       <a href="#" id="up"><i class="fa-solid fa-circle-chevron-up"></i></a>
     </footer>
   </div>
+
+  <script data-cfasync="false" src="./js/form-submission-handler.js"></script>
 </body>
 
 </html>
