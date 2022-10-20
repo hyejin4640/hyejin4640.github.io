@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>반응속도 게임</title>
+  <style>
+    #color {
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 100px;
+      user-select: none;
+      /*사용자가클릭해도 선택이안되게 (블락이잡히는걸 방지 == 그림자같은)*/
+    }
+
+    .waiting {
+      background-color: aqua;
+    }
+
+    .ready {
+      background-color: red;
+    }
+
+    .now {
+      background-color: rgb(9, 165, 9);
+    }
+
+    #result {
+      margin-top: 10px;
+      font-size: 1.3rem;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="color" class="waiting">
+    클릭해서 Start!
+  </div>
+  <div id="result"></div>
+  <script src="./main.js"></script>
+</body>
+
+</html>
