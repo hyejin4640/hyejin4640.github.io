@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+
+body {
+  height: 500vw;
+  background-image: url(../img/bg-space.png);
+  background-attachment: fixed;
+}
+
+/* ************* progress bar *****************/
+.progress {
+  width: 100vw;
+  background-color: #fff;
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.progress>.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: rgb(44, 243, 84);
+}
+
+/* ************ menu bar **********************/
+
+nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3%;
+  z-index: 1;
+}
+
+nav a {
+  display: block;
+  font-size: 2rem;
+  color: #fff;
+  padding: 10px;
+}
+
+nav a.active {
+  color: red;
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+
+/*************** main style *******************/
+#wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  /* perspective 상속받음(z값)*/
+
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: translateZ(-1000vw);
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: rgba(255, 255, 255, 0.7); */
+}
+
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 7rem; */
+
+}
+
+.box-left {
+  width: 2000vw;
+  transform: rotateY(90deg) translateZ(-1000vw);
+  /* 기본값인 center를기준으로 90도를 회전한다.
+  그상태에서 z영역에서 뒤로이동한다(이유는 section의 박스 왼쪾옆면을 만들어야하니까) */
+}
+
+.box-right {
+  width: 2000vw;
+  /* background-color: gold; */
+  transform: rotateY(90deg) translateZ(-900vw);
+
+}
+
+/* js파일 :  setSectionPos 함수의 실행을 css파일에서 한다면 .... */
+.front-a {
+  background-image: url(../img/01-sun.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.front-b {
+  background-image: url(../img/02-susung.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.front-c {
+  background-image: url(../img/03-venus.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.front-d {
+  background-image: url(../img/04-earth.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.front-e {
+  background-image: url(../img/05-hawsung.png);
+  /* background-position: ; */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.front-f {
+  background-image: url(../img/06-mocksung.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.front-g {
+  background-image: url(../img/07-tosung.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.front-h {
+  background-image: url(../img/08-moon.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

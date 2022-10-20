@@ -1,0 +1,426 @@
+@charset 'utf-8';
+
+.wrapper{
+  width: 100%;
+}
+
+
+/****************************** header ********************************  */
+header {
+  background-color: #1a6dff;
+  width: 100%;
+  padding: 3rem 2rem 20rem 3rem;
+  box-sizing: border-box;
+}
+.logo {
+  width: 100%;
+  margin-bottom: 8%;
+}
+.logo > img {
+  width: 115px;
+  height: 35px;
+}
+.benner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head_img {
+  width: 60%;
+}
+.head_img > img {
+  width: 100%;
+}
+/* 이미지의 width를 정한이유 : 이미지의를 감싼고있는 부모태그의 width 값의 안에서 이미지 크기가 결정되야하기때문에 
+99% 는 이미지크기는 이미 정해져서 갖고왔지만 크기가 부모태그안에서  100%크기를 설정한다고 알려야함*/
+
+.head_text {
+  width: 40%;
+  box-sizing: border-box;
+  color: #fff;
+  padding-left: 8rem;
+}
+
+.head_text h1 {
+  font-size: 4rem;
+}
+.head_text p {
+  font-size: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.head_text .head_button {
+  width: 100%;
+}
+.head_text .head_button a {
+  width: 120px;
+  display: block;
+  font-size: 20px;
+  padding: 20px;
+  background-color: #fff;
+  color: #1a6dff;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* ********************************main ******************************** */
+main {
+  width: 100%;
+}
+
+main section .slide_wrap,
+main section .explain_wrap,
+main section .charge_wrap {
+  width: 70%;
+  margin: 0 auto;
+  padding: 14rem 0;
+}
+
+/* section : section_slide */
+.section_slide {
+  background-color: #f4f3f3;
+}
+.section_slide .slide_wrap input[name="slide"] {
+  display: none;
+}
+/* silde_text */
+.slide_text {
+  margin-bottom: 2rem;
+}
+.slide_text h1 {
+  font-size: 2.8rem;
+  text-align: center;
+}
+.slide_text p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+/* slide_show ****/
+
+
+
+.slide_show {
+  height: 448px;
+  width: 1090px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.full_slide {
+  display: flex;
+  position: absolute;
+  transition: 0.5s;
+}
+.slide_show .full_slide div {
+  height: 448px;
+}
+.slide_show .full_slide div img {
+  display: block;
+  min-height: 297px;
+  height: 297px;
+}
+
+.slide_show .full_slide div p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.slide_btn {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.slide_btn label{
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  background-color: #b2b3b4;
+}
+
+.slide_btn label[for=slide3],
+.slide_btn label[for=slide4],
+.slide_btn label[for=slide5]{
+  display: none;
+}
+input[id="slide1"]:checked ~ .slide_show .full_slide {
+  top: 0;
+  left: 0;
+}
+input[id="slide2"]:checked ~ .slide_show .full_slide {
+  top: 0;
+  left: -100%;
+}
+
+input[id="slide1"]:checked ~ .slide_btn label[for="slide1"],
+input[id="slide2"]:checked ~ .slide_btn label[for="slide2"] {
+  background-color: #1a6dff;
+}
+
+
+.customer_button {
+  margin: 0 auto;
+  width: 284px;
+  height: 69px;
+}
+.customer_button a {
+  display: block;
+  background-color: #1a6dff;
+  padding: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #1a6dff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* section_explain */
+main section .explain_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.explain_wrap .explain_left {
+  margin-right: 12rem;
+  /* 왼쪽 라인과 오른쪽 라인의 간격을 위해 */
+  /* grid,flex는 틀을 잡거나 요소간의 영역의 비율을 배분할수있고 , 위치의간격은 margin이나 padding을 통해 조절한다.
+  또는 grid를 사용할시 gap을 이용해 요소간에 일정한 간격을 지정할수도있다. */
+}
+.explain_left h1 {
+  position: relative;
+  top: -3rem;
+  left: -9rem;
+  font-size: 3.6rem;
+  margin-bottom: 30rem;
+  /* 전체적인 틀에서 왼쪽, 위로 살짝 벗어나게 위치를 잡기위해  */
+}
+.explain_left div,
+.explain_right div {
+  width: 503px;
+  /* 이미지나 요소의컨텐츠의 전체적인 사이즈를 정해놓고 그안에 %로 각요소들의 사이즈를 정함 */
+}
+.explain_left .two,
+.explain_right .one {
+  margin-bottom: 50rem;
+}
+.explain_left .two img {
+  width: 100%;
+  height: 585px;
+}
+.explain_left .four img {
+  width: 100%;
+  height: 399px;
+}
+.explain_right .one img {
+  width: 100%;
+  height: 382px;
+}
+.explain_right .tree img {
+  width: 100%;
+  height: 585px;
+}
+.explain_left h2,
+.explain_right h2 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.explain_left p,
+.explain_right p {
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+/* section : siction_chage */
+.section_charge {
+  background-color: #edf4ff;
+}
+.charge_text {
+  text-align: center;
+}
+.charge_text h1 {
+  font-size: 3.6rem;
+  margin: 3rem 0;
+}
+.charge_text p {
+  font-size: 2rem;
+  color: #676767;
+}
+.charge_squre {
+  width: 100%;
+  display: flex;
+  margin-top: 8rem;
+}
+.charge_squre article {
+  flex-grow: 1;
+  /* 부모의 flex를주고 자식요소에 각비율을 1씩 분배함
+  즉, 똑같이 나눈다 */
+  margin: 1.5rem;
+  /* 각요소의 간격을 벌림 */
+  padding: 3rem;
+  /* 각요소안의 컨텐츠를 border line 안으로 더들어오게함 */
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+/* 각각에 따로따로 지정해서 스타일을 줘야 지정됨 */
+.charge_squre .Pro {
+  position: relative;
+}
+.charge_squre .Global {
+  position: relative;
+}
+/* before,after : padding안으로 시작점에서 만들어진다 */
+.charge_squre .Global::before {
+  content: url("../image/text_ballon.svg");
+  position: absolute;
+  top: -4.5rem;
+  /* padding,margin 값을 더해 위치를 맞춤 */
+  left: 25%;
+}
+.charge_squre .Pro::before {
+  content: url("../image/text_ballon.svg");
+  position: absolute;
+  top: -4.5rem;
+  /* padding,margin 값을 더해 위치를 맞춤 */
+  left: 25%;
+}
+.charge_squre article p,
+.charge_squre article h4,
+.charge_squre article h6,
+.charge_squre article hr {
+  text-align: center;
+  /* articel 안에 마지막 div 요소는 왼쪾 정열이기때문에 따로 지정 */
+}
+.charge_squre article p:nth-of-type(1) {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 1.6rem;
+}
+.charge_squre article h4 {
+  font-size: 3.6rem;
+  margin-bottom: 5rem;
+}
+.charge_squre article p:nth-of-type(2) {
+  height: 1.6rem;
+  /* 4개의 article중에 하나는 컨텐츠가없기때문에 영역이안잡혀 
+  보여지는 영역이 한칸 덜 내려와서 height 로 아예 높이 설정을 해둠 */
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  margin-bottom: 1rem;
+  color: #676767;
+}
+
+.charge_squre article h6 {
+  font-size: 2rem;
+  color: #1a6dff;
+  margin-bottom: 2rem;
+}
+.charge_squre article h6 > span {
+  font-size: 1.3rem;
+  color: #1a6dff;
+}
+.charge_squre article hr {
+  margin: 2rem 0;
+}
+.charge_squre article div {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  /* 지정한 태그의 말그대로 line! 한줄한줄의 간격을 정함 */
+  color: #676767;
+}
+/* 이렇게 동일한 article을 재사용해 여러개 만들땐,
+태그는 요소마다 텍스트용 태그라도 각가 다르게 해야 스타일지정시 편리함 */
+
+.charge_discount p {
+  width: 98%;
+  text-align: right;
+  font-size: 1.6rem;
+  color: #676767;
+}
+.charge_button {
+  margin: 0 auto;
+  width: 200px;
+  height: 69px;
+}
+.charge_button a {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #1a6dff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+/****************************** footer ******************************  */
+footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* background-image: url(../image/footer_L.svg);
+  background-size: cover;
+  background-origin: border-box; */
+  background:  #2850d3;
+}
+footer .graph {
+  position: absolute;
+  top: 30%;
+  text-align: center;
+}
+footer h1 {
+  font-size: 3.7rem;
+  margin: 4rem 0;
+}
+footer p {
+  font-size: 2rem;
+  color: #676767;
+}
+footer .graph_button {
+  margin: 0 auto;
+  width: 270px;
+  height: 69px;
+}
+.graph_button a {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #1a6dff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+
+.custom-shape-divider-top-1663833159 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1663833159 svg {
+  position: relative;
+  display: block;
+  width: calc(210% + 1.3px);
+  height: 500px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1663833159 .shape-fill {
+  fill: #FFFFFF;
+}

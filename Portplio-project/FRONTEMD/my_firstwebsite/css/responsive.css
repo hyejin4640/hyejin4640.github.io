@@ -1,0 +1,339 @@
+@charset 'utf-8';
+
+@media screen and (max-width: 790px) {
+  /*****headeer ********/
+  /* gnb */
+  .gnb .logo {
+    display: none;
+  }
+  .gnb nav {
+    position: relative;
+    width: 100%;
+  }
+  .gnb nav input[id="menu_btn"] + label[for="menu_btn"] {
+    display: block;
+    cursor: pointer;
+    left: 10px;
+  }
+  .gnb nav .a_list {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    left: -300%;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  .gnb nav input[id="menu_btn"]:checked ~ .a_list {
+    top: 40px;
+    left: 0;
+  }
+  .gnb nav .a_list a {
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 2rem;
+    color: #fff;
+    background-color: rgb(12, 80, 41);
+  }
+  .gnb nav input[id="menu_btn"] + label[for="menu_btn"] p {
+    transition: 0.3s;
+  }
+  .gnb
+    nav
+    input[id="menu_btn"]:checked
+    + label[for="menu_btn"]
+    > p:nth-child(1) {
+    transform: rotate(45deg);
+    top: 100%;
+  }
+  .gnb
+    nav
+    input[id="menu_btn"]:checked
+    + label[for="menu_btn"]
+    > p:nth-child(2) {
+    display: none;
+  }
+  .gnb
+    nav
+    input[id="menu_btn"]:checked
+    + label[for="menu_btn"]
+    > p:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 100%;
+  }
+  /* benner */
+  .benner {
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .benner .character img {
+    width: 240px;
+    height: 280px;
+  }
+  .benner .character {
+    width: 360px;
+    height: 360px;
+  }
+  .benner .character_text {
+    margin-top: 3rem;
+  }
+  .benner .character_text h1 {
+    font-size: 4rem;
+  }
+  .benner .character_text p {
+    font-size: 3rem;
+  }
+  .scroll {
+    font-size: 2.4rem;
+  }
+  /*********** main *****************/
+  /***** skill***** */
+  #skill {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* margin: 10rem auto; */
+    padding: 0;
+  }
+  .skill_name {
+    margin: 5rem;
+    font-size: 6rem;
+  }
+
+  .skill_icon img {
+    width: 5.7rem;
+    height: 5.7rem;
+  }
+  /**** work ****/
+  .work {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto;
+    padding: 0;
+  }
+  .work .work_name {
+    margin: 5rem;
+    font-size: 6rem;
+  }
+  .work .work_detail {
+    width: 50%;
+    min-width: 400px;
+  }
+  .work .work_slide {
+    width: 400px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .work .work_slide .work_fullslide {
+    display: flex;
+    width: 1200px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+
+  .work .work_slide .work_fullslide img {
+    width: 400px;
+    height: 350px;
+  }
+  /*** portfolio  *****/
+  .portfolio_name {
+    font-size: 7rem;
+    width: 100%;
+  }
+  #portfolio_detail {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #portfolio_detail .portfolio_left {
+    width: 100%;
+  }
+  #portfolio_detail .portfolio_left div {
+    height: 40rem;
+    font-size: 4rem;
+  }
+  #portfolio_detail .portfolio_right {
+    background-color: #fff;
+    width: 100%;
+  }
+  #portfolio_detail .portfolio_right a img {
+    width: 100%;
+  }
+  /******************* footer*********** */
+  footer #up {
+    font-size: 50px;
+    color: #fff;
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+  }
+  .contact {
+    width: 100%;
+    padding: 5rem;
+    box-sizing: border-box;
+  }
+  .contact_name {
+    font-size: 7rem;
+  }
+  .contact_inpo {
+    display: none;
+  }
+  .button button {
+    width: 30%;
+  }
+}
+/* ******************************************************************************* */
+@media screen and (max-width: 400px) {
+  .benner .character img {
+    width: 160px;
+    height: 180px;
+  }
+  .benner .character {
+    width: 230px;
+    height: 240px;
+  }
+  .benner .character_text h1 {
+    font-size: 3rem;
+  }
+  .benner .character_text p {
+    font-size: 2rem;
+  }
+  /* skill */
+  #skill {
+    width: 90%;
+  }
+  .skill_detail {
+    width: 90%;
+  }
+  .skill_name {
+    margin: 3rem;
+    font-size: 4rem;
+  }
+  .skill_text {
+    line-height: 3rem;
+  }
+  .skill_text p {
+    font-size: 2.2rem;
+  }
+  .skill_text h1 {
+    font-size: 2.5rem;
+  }
+  .skill_icon img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .skill_icon h1 {
+    font-size: 2.4rem;
+  }
+  /* work**** */
+  .work {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto;
+    padding: 0;
+  }
+  .work .work_name {
+    margin: 3rem;
+    font-size: 4rem;
+  }
+  .work .work_detail {
+    width: 90%;
+    min-width: 200px;
+  }
+  .work .work_slide {
+    margin: 0 auto;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .work .work_slide .work_fullslide {
+    display: flex;
+    width: 750px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  .work_btn {
+    text-align: center;
+  }
+  .work .work_btn label {
+    display: inline-block;
+    width: 3rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: linen;
+    margin: 5px 0;
+  }
+  .work .work_slide .work_fullslide img {
+    width: 250px;
+    height: 200px;
+  }
+  /* portfolio*** */
+  .portfolio_name {
+    font-size: 5rem;
+    width: 100%;
+  }
+  #portfolio_detail {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #portfolio_detail .portfolio_left {
+    width: 100%;
+  }
+  #portfolio_detail .portfolio_left div {
+    height: 40rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  #portfolio_detail .portfolio_right {
+    background-color: #fff;
+    width: 100%;
+  }
+  #portfolio_detail .portfolio_right a img {
+    width: 100%;
+  }
+  footer #up {
+    font-size: 50px;
+    color: #fff;
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+  }
+  /* footer */
+  .contact {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .contact_name {
+    font-size: 5rem;
+  }
+  .contact_inpo {
+    display: none;
+  }
+  .button button {
+    width: 60%;
+  }
+}

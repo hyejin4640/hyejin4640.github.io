@@ -1,0 +1,136 @@
+@charset 'utf-8';
+
+@media screen and (max-width:768px) {
+  /* ********** */
+  .benner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .head_img {
+    width: 100%;
+  }
+  
+.head_text {
+  width: 100%;
+}
+.head_text h1 {
+  font-size: 3rem;
+}
+.head_text p {
+  font-size: 1.8rem;
+}
+/* *************  */
+main section .slide_wrap,
+main section .explain_wrap,
+main section .charge_wrap {
+  width: 90%;
+  margin: 0 auto;
+  /* padding: 14rem 0; */
+}
+.slide_show {
+  height: 448px;
+  width: 363px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.full_slide {
+  display: flex;
+  position: absolute;
+  transition: 0.5s;
+}
+.slide_btn label[for=slide3],
+.slide_btn label[for=slide4],
+.slide_btn label[for=slide5]{
+  display: inline-block;
+}
+input[id="slide1"]:checked ~ .slide_show .full_slide {
+  top: 0;
+  left: 0;
+}
+input[id="slide2"]:checked ~ .slide_show .full_slide {
+  top: 0;
+  left: -100%;
+}
+input[id="slide3"]:checked ~ .slide_show .full_slide {
+  top: 0;
+  left: -200%;
+}
+input[id="slide4"]:checked ~ .slide_show .full_slide {
+  top: 0;
+  left: -300%;
+}
+input[id="slide5"]:checked ~ .slide_show .full_slide {
+  top: 0;
+  left: -400%;
+}
+input[id="slide3"]:checked ~ .slide_btn label[for=slide3],
+input[id="slide4"]:checked ~ .slide_btn label[for=slide4],
+input[id="slide5"]:checked ~ .slide_btn label[for=slide5]
+{
+  background-color: #1a6dff;
+}
+/* ************** */
+main section .explain_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.explain_wrap .explain_left {
+  margin-right: none;
+
+}
+/* 여기서부터 */
+.explain_left h1 {
+position: relative;
+top: 0;
+left: 20%;
+margin-bottom: 30rem;
+}
+
+.explain_left div,
+.explain_right div {
+  width: 90%;
+  margin: 1rem;
+}
+.explain_left .two,
+.explain_right .one {
+  margin-bottom: 1rem;
+}
+.explain_left .two img {
+  width: 100%;
+  height: 585px;
+}
+.explain_left .four img {
+  width: 100%;
+  height: 399px;
+}
+.explain_right .one img {
+  width: 100%;
+  height: 382px;
+}
+.explain_right .tree img {
+  width: 100%;
+  height: 585px;
+}
+.explain_left h2,
+.explain_right h2 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.explain_left p,
+.explain_right p {
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+.charge_squre {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+}
+}

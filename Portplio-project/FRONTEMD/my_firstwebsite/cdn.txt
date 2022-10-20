@@ -1,0 +1,14 @@
+폰트어썸 링크
+굵은글씨
+@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap');
+font-family: 'Nuosu SIL', serif;
+보통글씨
+@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&family=Oswald:wght@200;500&display=swap');
+font-family: 'Oswald', sans-serif;
+
+포트폴리오 글씨
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dongle:wght@300&family=Monoton&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&family=Sunflower&display=swap');
+font-family: 'Black Ops One', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+font-family: 'Rammetto One', cursive;

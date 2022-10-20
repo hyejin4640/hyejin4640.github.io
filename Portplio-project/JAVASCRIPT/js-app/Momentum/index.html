@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <title>모멘텀</title>
+  </head>
+
+  <body>
+    <button class="theme" type="button">toggle theme</button>
+    <div class="mailWrap close">
+
+      <button class="xbtn">✖</button>
+      <form
+        class="gform"
+        method="POST"
+        data-email="bhyejin798@gmail.com"
+        action="https://script.google.com/macros/s/AKfycbxGmGuXbnrg8A6DrIBlWa8M6_fs71ZiQup_ZtXrjU5t-sl1RxclhPCSDtMROhptk3_DZQ/exec"
+      >
+        <fieldset class="form-elements">
+          <div class="box-input">
+            <label for="userName">Name</label>
+            <input
+              type="text"
+              id="userName"
+              name="name"
+              placeholder="your name"
+            />
+          </div>
+          <div class="box-input">
+            <label for="userEmail">Email-Adress</label>
+            <input
+              type="email"
+              id="userEmail"
+              name="email"
+              placeholder="your email write !"
+            />
+          </div>
+          <div class="box-input">
+            <label for="userMessage">message </label>
+            <textarea name="message" id="userMessage"></textarea>
+          </div>
+          <div class="box-input">
+            <button type="submit" class="btnSend">Send</button>
+          </div>
+        </fieldset>
+        <div style="display: none" class="thankyou_message">
+          <p>메일이 성공적으로 보내졌습니다. 빠른시일내에 답변드리겠습니다!</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="wrap">
+      <header>
+        <i class="fa-regular fa-envelope"></i>
+        <button class="logout" type="button">logout</button>
+        <h1 class="time"></h1>
+        <p class="login-name hidden">Hello</p>
+        <form id="loginForm">
+          <input type="text" placeholder="로그인 이름 입력" required />
+          <!-- required는 입력을해야지만 실행되도록하는 설정 -->
+          <button>Log-in</button>
+        </form>
+      </header>
+
+      <main>
+        <section id="left">
+          <form id="todoForm">
+            <input type="text" placeholder="ToDo-List 할일입력✏️" required />
+          </form>
+          <ul class="todoList">
+            <!-- <li><span>입력받은값</span><button>X</button></li> -->
+          </ul>
+        </section>
+
+        <section id="right">
+          <div class="weatherWrap">
+            <p class="weather_city"></p>
+            <img class="weather_icon" src="" alt="" />
+            <p class="weather"></p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="quote">
+          <span class="quote_text">명언</span>
+          <span class="quote_author">작가</span>
+          <button>▶</button>
+        </div>
+      </footer>
+    </div>
+
+    <div class="bg_desc"></div>
+    <div class="bgVideo">
+      <video src="./img/Clouds above a road.mp4" autoplay muted loop></video>
+    </div>
+
+    <script src="./js/time.js"></script>
+    <script src="./js/value.js"></script>
+    <script src="./js/todoList.js"></script>
+    <script src="./js/form-submission-handler.js"></script>
+    <script src="./js/localstrage.js"></script>
+    <script src="./js/mail.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/quippery.js"></script>
+    <script src="./js/main-login.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,65 @@
+@charset "utf-8";
+html,body{
+  height: 100%;
+}
+/*  백그라운드만 스크롤이 안되게 */
+/*  지정한 요소의 백그라운드가 설정한 height값만큼 화면에 고정되어있기대문에
+다음 요소가 스크롤되서 올라오면 고정요소의 배경은 그대로있고 그다음요소가 마치 위에 한겹 쌓여서
+올라오는 것처럼 보인다 */
+.bg1-img,
+.bg2-img,
+.bg3-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;  /* background에 이미지를 넣을경우만 배경이 고정되는 속성 */
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.bg1-img{
+  background-image: url('../img/sky1.png');
+  height: 100%;
+}
+.bg2-img{
+  background-image: url('../img/sky2.png');
+  height: 50%;
+}
+.bg3-img{
+  background-image: url('../img/sky3.png');
+  height: 50%;
+
+}
+
+section .caption > p {
+  background-color: #555;
+  padding: 1rem 0 1rem 1rem ;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+} 
+section .caption.no-back > p{
+  background-color: transparent;  /* 투명 */
+}
+section.bg1-text h3{
+  text-align: center;
+  letter-spacing: 5px;
+  padding-top: 30px;
+}
+section.bg1-text p{
+  background-color: #fff;
+  text-align: justify;  /* 글자 양쪽 정렬 */
+  padding: 50px;
+  line-height: 2rem;
+  color: #333;
+}
+section.bg2-text p,
+section.bg3-text p{
+  text-align: center;
+  background-color: #333;
+  padding: 50px;
+  color: #fff;
+
+}

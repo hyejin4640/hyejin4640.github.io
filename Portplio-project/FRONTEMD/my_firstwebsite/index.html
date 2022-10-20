@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <title>박혜진의 포토폴리오</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div class="gnb">
+        <div class="logo">JUST CHILL</div>
+        <nav>
+          <input type="checkbox" id="menu_btn" />
+          <label for="menu_btn">
+            <p></p>
+            <p></p>
+            <p></p>
+          </label>
+          <div class="a_list">
+            <a href="#">HOME</a>
+            <a href="#skill">SKILL</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+          </div>
+        </nav>
+      </div>
+      <div class="benner">
+        <div class="character">
+          <img src="./img/me.png" alt="benner_image" />
+        </div>
+        <div class="character_text">
+          <h1>Hyejin Park</h1>
+          <p>Web Developer</p>
+          <p><i class="fa-solid fa-envelope"></i> bhyejin798@gmail.com</p>
+        </div>
+        <a href="#main" class="scroll">Scroll</a>
+      </div>
+      <!-- 앵커 걸기 -->
+    </header>
+    <main id="main">
+      <section id="skill">
+        <div class="skill_name">SKILL</div>
+        <div class="skill_detail">
+          <div class="skill_text">
+            <h1>Hi There!</h1>
+            <p>My name is Park Hyejin and I am Korean nationality</p>
+            <p>I am currently preparing to be a front-end developer!</p>
+          </div>
+          <div class="skill_icon">
+            <h1>Technical Skill</h1>
+            <img src="./img/html.png" alt="html_logo" />
+            <img src="./img/css.png" alt="css_logo" />
+            <img src="./img/javascript.png" alt="javascript_logo" />
+            <img src="./img/python.png" alt="python_logo" />
+            <img src="./img/github.png" alt="github_logo" />
+            <img src="./img/figma.png" alt="figma_logo" />
+            <img src="./img/photoshop.png" alt="photoshop_logo" />
+          </div>
+        </div>
+      </section>
+      <section class="work">
+        <input type="radio" id="tab1" name="tab" checked />
+        <input type="radio" id="tab2" name="tab" />
+        <input type="radio" id="tab3" name="tab" />
+        <div class="work_name">works attitude</div>
+        <div class="work_detail">
+          <div class="work_slide">
+            <div class="work_fullslide">
+              <img src="./img/COLLABORATION.png" alt="work_aditude" />
+              <img src="./img/CLOBAL.png" alt="work_aditude2" />
+              <img src="./img/THINK CREATIVE.png" alt="work_aditude3" />
+            </div>
+          </div>
+          <div class="work_btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio">
+        <div class="portfolio_name">Portfolio</div>
+        <div id="portfolio_detail">
+          <div class="portfolio_left">
+            <div>Blackyak_Website</div>
+            <div>Compaensating_Website</div>
+            <div>Dangerous_Website</div>
+          </div>
+          <div class="portfolio_right">
+            <a href="https://www.byn.kr/blackyak"><img src="./img/blackyak_page.png" alt="webage1" /></a>
+            <a href="https://kr.burberry.com/"><img src="./img/campaensating_page.png" alt="webage2" /></a>
+            <a href="#"><img src="./img/dangerous_page.png" alt="webpage3" /></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contact">
+      <div class="contact_wrap">
+        <div class="contact">
+          <div class="contact_name">CONTACT</div>
+          <p>Thank you for wathing :)</p>
+          <form class="gform" method="POST" data-email="bhyejin798@gmail.com" action="https://script.google.com/macros/s/AKfycbxGmGuXbnrg8A6DrIBlWa8M6_fs71ZiQup_ZtXrjU5t-sl1RxclhPCSDtMROhptk3_DZQ/exec">
+            <fieldset class="form-elements">
+            <div>
+              <label for="name">Name: </label>
+              <input type="text"  name="name" id="name" />
+            </div>
+            <div>
+              <label for="mail">E-mail:</label>
+              <input type="email" name="email" id="mail" />
+            </div>
+            <div>
+              <label for="msg">Message</label>
+              <textarea name="message" id="msg"></textarea>
+            </div>
+            <div class="button">
+              <button type="submit">Send</button>
+            </div>
+          </fieldset>
+          <div style="display:none" class="thankyou_message">
+            <p>메일이 성공적으로 전송되었습니다</p>
+          </div>
+          </form>
+          <div class="contact_inpo">
+            <div class="contact_inponame">INPO</div>
+            <div class="contact_icon">
+              <p><i class="fa-brands fa-facebook-f"></i> Face book</p>
+              <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+              <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" id="up"><i class="fa-solid fa-circle-chevron-up"></i></a>
+    </footer>
+  </div>
+
+  <script data-cfasync="false" src="./js/form-submission-handler.js"></script>
+</body>
+
+</html>

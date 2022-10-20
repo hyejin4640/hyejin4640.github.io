@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+#wrap{
+  width: 600px;
+  margin:50px auto ;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+.slide{
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  overflow: hidden;
+  position: relative;
+}
+.slide-list{
+  display: flex;
+  position: absolute;
+transform: translateX(-300px); /* 자동슬라이드를 위해 양끝에 이미지를 붙여주었기때문에 복제된 이미지말고 원래첫번재 인 이미지를 보여주기위해 시작값을 이렇게 설정함*/
+/* transition: 300ms;   0ms */
+}
+.slide-list > img{
+  width: 300px;
+  display: block;
+  height: 300px;
+}
+.slide-btn > button{
+  width: 70px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(50% );
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+/* .slide-btn > button:disabled{
+
+} */
+.slide-btn > .prev{
+  left: 50px;
+}
+.slide-btn > .next{
+  right: 50px;
+}
+.circle {
+  margin: 30px;
+}
+.circle > .dot{
+  width: 20px;
+  height: 20px;
+  background-color: #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 3px;
+}
+
+.circle > .dot-active{
+  background-color: #222;
+}
+.play-btn > *{
+  width: 40px;
+  height: 40px;
+  /* background-color: skyblue; */
+}
+.bg{
+  border: 1px solid #000;
+  line-height: 60px;
+  border-radius: 10%;
+  height: 60px;
+  width: 100px;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  background-color: rgb(117, 102, 216);
+  color: aliceblue;
+font-weight: 900;
+}

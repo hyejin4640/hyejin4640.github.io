@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>스크롤 애니메이션</title>
+  <link rel="stylesheet" href="../reset.css">
+  
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Nabla&family=Sunflower:wght@500&display=swap');
+
+    *{
+      box-sizing: border-box;
+      /* 보통 magin보다는 padding을 많이쓴다
+      magin값은 계산하기 복잡하니 boxsiaing으로 묶으면 height값안에
+      padding값도들어가니까. */
+      font-family: 'Sunflower', sans-serif;
+    }
+    header{
+      background-color: coral;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+    }
+    main{
+      padding: 100px 0;
+    }
+    section{
+      display: flex;
+      justify-content: space-around;
+      padding: 5%;
+    }
+    section div{
+      background-color: seagreen;
+      width: 23%;
+      height: 300px;
+      color: yellow;
+      font-size: 3rem;
+      line-height: 150px;
+      text-align: center;
+      text-shadow: 5px 5px 5px orange;
+      text-shadow: 5px 5px 5px orangered;
+      box-shadow: 10px 10px 10px rgb(116, 119, 116);
+      transition: 0.5s;
+      opacity: 0.3;
+    }
+
+    /* 애니메이션은 css에서 처리하는게가장자연스러움 그래서class를추가하거나삭제하는것만 js이용 */
+    
+    /* box animation **********************************************/
+    /* div에 먼저 transform으로 변화값을 주고 js로 지정한조건이되면 "show" 라는 class를 부여해 
+    각각의 class들로 넣은 transform을 none처리 시킨다. */
+    .box-up{
+      transform: translateY(100px);
+    }
+    .box-down{
+      transform: translateY(-100px);
+    }
+    .box-right{
+      transform: translateX(-100px);
+    }
+    .box-left{
+      transform: translateX(100px);
+    }
+    .box-rotateL{
+      transform: rotate(-360deg);
+    }
+    .box-rotateR{
+      transform: rotate(360deg);
+    }
+    .box-scaleUp{
+      transform: scale(0.5);
+    }
+    .box-scaleDown{
+      transform: scale(1.5);
+    }
+    .show{
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>아래로⬇ <br>스크롤 하세요!!</h1>
+  </header>
+  <main>
+    <section>
+      <div class="box-up">BOX-1</div>
+      <div class="box-up">BOX-2</div>
+      <div class="box-up">BOX-3</div>
+      <div class="box-up">BOX-4</div>
+    </section>
+    <section>
+      <div class="box-up">BOX-5</div>
+      <div class="box-down">BOX-6</div>
+      <div class="box-right">BOX-7</div>
+      <div class="box-left">BOX-8</div>
+    </section>
+    <section>
+      <div class="box-rotateL">BOX-9</div>
+      <div class="box-rotateR">BOX-10</div>
+      <div class="box-scaleUp">BOX-11</div>
+      <div class="box-scaleDown">BOX-12</div>
+    </section>
+  </main>
+  <script src="./3_scroll_box.js"></script>
+  <!-- <script src="./3_scroll_box_Section.js"></script> -->
+</body>
+</html>
