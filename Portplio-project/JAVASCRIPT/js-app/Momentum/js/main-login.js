@@ -6,8 +6,8 @@ const handlerSubmit =(e)=>{
 }
 
 const showUserName = ( userName )=>{
-  tagLoginForm.classList.add('hidden');
-  tagLoginName.classList.remove('hidden');
+  tagLoginForm.classList.add('close');
+  tagLoginName.classList.remove('close');
   tagLoginName.textContent = `HELLO ${userName} 🙋‍♀️`;
 }
 
@@ -25,6 +25,8 @@ confirmLogin =()=>{
     tagLoginForm.addEventListener('submit',handlerSubmit );
     btnLogin.classList.remove('close');
     btnLoout.classList.add('close');
+    tagLoginName.classList.add('close');
+    btnLogin.classList.remove('close');
   }
 }
 
@@ -33,6 +35,8 @@ const handlerLogout =()=>{
   tagLoginName.innerHTML ='';
   tagTodoUl.innerHTML ='';
   tagLoginInput.value ='';
+  tagLoginForm.classList.remove('close');
+  btnLogin.classList.remove('close');
 }
 
 const init =()=>{
@@ -40,7 +44,7 @@ const init =()=>{
   time_init();
   confirmLogin();
   todoList_init();
-  background_init();
+  // background_init();
   btnLoout.addEventListener('click',handlerLogout )
   
 }

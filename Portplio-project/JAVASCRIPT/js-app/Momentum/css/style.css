@@ -47,7 +47,6 @@ transform: translateY(3px);
 /* mail -wrap */
 .close{
   display: none;
-  
 }
 .mailWrap{
   position: relative;
@@ -87,9 +86,9 @@ transform: translateY(3px);
   font-weight: bolder;
 }
 /* wrap ***********************************************/
-.hidden {
+/* .hidden {
   display: none;
-}
+} */
 
 .wrap {
   width: 50%;
