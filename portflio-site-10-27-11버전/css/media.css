@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+@media (max-width:1200px) {
+
+  .character>img {
+    width: 400px;
+    height: 380px;
+  }
+
+  .introduce .hello {
+    font-size: 8rem;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 93%;
+    justify-content: space-between;
+  }
+
+  .benner {
+    width: 93%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-open {
+    display: block;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .logo {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+  .nav-bar {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    font-size: 3.5rem;
+
+  }
+
+
+  .character>img {
+    width: 380px;
+    height: 360px;
+  }
+
+  .introduce {
+    margin-top: 2rem;
+  }
+
+  .introduce .hello {
+    font-size: 6em;
+  }
+
+  .introduce>p {
+    font-size: 1.5rem;
+  }
+
+  /* main *** */
+  main {
+    margin-top: 30rem;
+  }
+
+  /* sc-web */
+  .web-containner {
+    margin-bottom: 5rem;
+  }
+
+  .web-wrap {
+    width: 80%;
+    height: 100vh;
+  }
+
+  a.mini-content {
+    width: 100%;
+  }
+
+  .web-contents {
+    flex-direction: column;
+
+  }
+
+  .web-contents .web-left-video {
+    width: 80%;
+    height: 80%;
+  }
+
+  .web-left-video a {
+    width: 100%;
+    height: 100%;
+  }
+
+  .web-right-txt {
+    margin-top: 2rem;
+    height: 50%;
+    width: 80%;
+  }
+
+
+  .web-right-txt h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .web-right-txt p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .web-right-txt button {
+    padding: 0.8rem 1rem;
+  }
+
+  .txt-flow p {
+    padding: 0.5rem 0;
+  }
+
+  /* sc-mini-project */
+  #sc-mini-project {
+    margin-top: 20rem;
+  }
+
+  .mini-project-container {
+    width: 90%;
+  }
+
+  .mini-h1 {
+    font-size: 3rem;
+  }
+
+
+  .mini-btn-wrap {
+    flex-direction: column;
+  }
+
+  .mini-btn-wrap>.btn-mini {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .mini-contents {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .mini-contents a {
+    width: 80%;
+  }
+
+
+  #sc-contact {
+    padding: 2rem 0;
+  }
+
+  .contact-wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .contact-h1 {
+    width: 80%;
+    font-size: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .gform {
+    width: 80%;
+  }
+
+  /* 공통분모 */
+  button {
+    padding: 0.8rem 1rem;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+  }
+
+  .topBtn {
+    font-size: 3rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+  }
+
+}
+
+/*  400px  */
+@media (max-width: 400px) {
+
+  main {
+    margin-top: 40rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    width: 100%;
+    font-size: 2.6rem;
+    font-weight: bolder;
+  }
+
+  .nav-bar {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    font-size: 3rem;
+  }
+
+  .character>img {
+    width: 300px;
+    height: 280px;
+  }
+
+  .introduce .hello {
+    font-size: 5rem;
+  }
+
+  .introduce>p {
+    font-size: 1.2rem;
+  }
+
+
+  /* MAIN */
+  main {
+    margin-top: 0;
+  }
+
+  .web-left-video a {
+    width: 95%;
+    height: 100%;
+    display: block;
+    margin: 1rem auto 0 auto;
+  }
+
+  .web-right-txt {
+    width: 92%;
+  }
+
+
+  .web-right-txt h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .web-right-txt p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .web-right-txt button {
+    padding: 0.4rem 0.6rem;
+
+  }
+
+  .web-wrap-h2>.web-wrap-title {
+    margin-left: 10%;
+    transform: translateX(-10%);
+  }
+
+  .web-wrap-h2 .dots .dot {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-left img {
+    width: 400px;
+  }
+
+
+  /* 공통분모 */
+
+  button {
+    padding: 0.6rem 0.8rem;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+  }
+
+}
