@@ -98,14 +98,11 @@ nav {
   padding-right: 0.3rem;
 }
 
-
-
 .nav-menu {
   padding: 0.8rem;
   display: flex;
   background-color: var(--main-color);
   border-radius: 1rem;
-
 }
 
 @keyframes posMenu {
