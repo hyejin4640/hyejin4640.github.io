@@ -1,0 +1,67 @@
+{
+  "project" : [
+    {
+      "type" : "js",
+      "image" : "./img/js-game-number.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/JAVASCRIPT/js-game/Guess-Number-game/",
+      "alt" : "숫자맞추기게임-이미지"
+    },
+    {
+      "type" : "js",
+      "image" : "./img/js-app-todo.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/JAVASCRIPT/js-app/todolist/",
+      "alt" : "투두리스트 이미지"
+    },
+    {
+      "type" : "js",
+      "image" : "./img/js-game-pig-game.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/JAVASCRIPT/js-game/Pig-game/",
+      "alt" : "피그게임이미지"
+    },
+    {
+      "type" : "js",
+      "image" : "./img/js-app-img-caroulsel.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/JAVASCRIPT/js-app/imgCarousel/",
+      "alt" : "이미지캐러쉘애니메이션-이미지"
+    },
+    {
+      "type" : "js",
+      "image" : "./img/js-app-door.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/JAVASCRIPT/js-app/open-door/",
+      "alt" : "문열고나오는애니메이션-이미지"
+    },
+ 
+    {
+      "type" : "js",
+      "image" : "./img/js-game-card.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/JAVASCRIPT/js-game/cardgame/",
+      "alt" : "카드게임-이미지"
+    },
+ 
+    {
+      "type" : "js",
+      "image" : "./img/js-game-rsp.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/JAVASCRIPT/js-game/rsp-game/",
+      "alt" : "가위바위보게임-이미지"
+    },
+
+    {
+      "type" : "py",
+      "image" : "./img/py-kiosk.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/PYTHON/메뉴주문 프로그램-kiosk.ipynb",
+      "alt" : "파이썬 키오스크 이미지"
+    },
+    {
+      "type" : "py",
+      "image" : "./img/py-lotto.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/PYTHON/로또 프로그램-lotto.ipynb",
+      "alt" : "파이썬 로또 이미지"
+    },
+    {
+      "type" : "py",
+      "image" : "./img/py-parking.png",
+      "siteURL" : "https://hyejin4640.github.io/Portplio-project/PYTHON/주차관리프로그램-Car-parking.ipynb",
+      "alt" : "파이썬 주차프로그램 이미지"
+    }
+  ]
+}
