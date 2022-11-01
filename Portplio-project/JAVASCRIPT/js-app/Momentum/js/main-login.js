@@ -1,6 +1,7 @@
 
 
 const handlerSubmit =(e)=>{
+  e.preventDefault();
   localStorageSet( LOGIN_KEY , tagLoginInput.value);
   tagLoginName.textContent = `HELLO ${localStorageGet(LOGIN_KEY)} 🙋‍♀️`;
 }
@@ -45,7 +46,7 @@ const init =()=>{
   confirmLogin();
   todoList_init();
   // background_init();
-  btnLoout.addEventListener('click',handlerLogout )
+  btnLoout.addEventListener('click',handlerLogout );
   
 }
 window.addEventListener('load',init);
