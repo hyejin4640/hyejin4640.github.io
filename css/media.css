@@ -23,7 +23,9 @@
     width: 93%;
     justify-content: space-between;
   }
-
+  .logo-txt{
+    display: none;
+  }
   .benner {
     width: 93%;
     flex-direction: column;

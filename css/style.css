@@ -86,10 +86,16 @@ nav {
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: bolder;
   padding: 0.5rem 1rem;
+  display: flex;
+  color: #d4d4f9;
+}
 
+.logo img{
+  width: 50px;
+  padding-right: 0.3rem;
 }
 
 
