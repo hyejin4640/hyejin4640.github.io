@@ -1,60 +1,83 @@
+const tagTodoForm = document.querySelector('#todoForm');
+const tagTodoInput = document.querySelector('#todoForm input');
+const tagTodoList = document.querySelector('.todoList');
+const TODO_KEY ="todos";
+let todos = [];
 
 
+// 함수정의 -----------------------------------------------------------------------------------------------------
+const saveLocalStorage =()=>{
+  const strSave = JSON.stringify(todos);   /* 문자열로 변환 */
+  localStorage.setItem(TODO_KEY , strSave );
+  
+  
+} 
 
-const saveLocalStorage = () => {
-  const strTodoList = JSON.stringify(todoListArr);
-  localStorageSet(TODO_KEY, strTodoList );
-};
-
-const saveTodosArr = (id, value) => {
-  const newobj = {
-    id : String(id),  // 삭제하려는 요소의 id와 로컬스토리지에 저장된 오브젝트의 id의 데이터타입이 number/string으로 달라 오류발행으로인해 id를 로컬에 넣을때부터 stirig으로 변환함
+const saveTodos =( id, value )=>{
+  const newObj = {
+    id, 
     value,
   };
-  todoListArr.push( newobj);
+  todos.push( newObj );
   saveLocalStorage();
-};
+}
 
-const handlerDelete =(e)=>{
-  const tagLi = e.currentTarget.parentNode;
-  const tagLiId = tagLi.id;
-  todoListArr = todoListArr.filter((item)=>{
-    return item.id !== tagLiId;
-  });  
-  tagLi.remove();
-  saveLocalStorage();
+const handlerDelete =(e)=>{ 
+  const delObj = e.target.parentElement;
+const delId = delObj.id;
+todos = todos.filter((item)=>{
+  return item.id !== delId
+})
+delObj.remove();
+saveLocalStorage();
+}
+
+const addTodoList =(id,value)=>{
+
+// 태그 총 3개 생성 li > button,span 
+const tagLi = document.createElement('li');
+const tagbutton = document.createElement('button');
+const tagspan = document.createElement('span');
+// id를 1부터 순서대로 추가하기
+tagLi.id = id;
+// 버튼 이벤트 추가
+tagbutton.addEventListener('click', handlerDelete );
+// html 문서안에 추가
+tagTodoList.appendChild(tagLi);
+tagLi.appendChild(tagspan);
+tagLi.appendChild(tagbutton);
+
+// 컨텐츠 추가
+tagspan.textContent = value;
+tagbutton.textContent ='❌';
+saveTodos( tagLi.id , value );
+
+}
+
+const handlerTodoSubmit =(e)=>{
+  // submit 기본속성 작동x.
+  e.preventDefault();
+  // 입력받은값 문서에 작성 : id는 현재시간을 넣어준다.(함수를넣어준게아니라 return된 현재시간의값을 넣어줌)
+  addTodoList(  Date.now() ,tagTodoInput.value );
+  // input 입력창 reset
+  tagTodoInput.value ='';
   
 }
 
-const createTodoListElem = (id, userTodo) => {  
-  const Li = document.createElement("li");
-  const span = document.createElement("span");
-  const button = document.createElement("button");
-
-  tagTodoUl.appendChild(Li);
-  Li.appendChild(span);
-  Li.appendChild(button);
-
-  Li.id = id;
-  button.addEventListener('click', handlerDelete );
-  span.textContent = userTodo ;
-  button.textContent = `❌`;
-  saveTodosArr(id, userTodo);
-};
-
-const handlerTodoSubmit = (e) => {
-  e.preventDefault();
-  const userTodo = tagTodoInput.value;
-  createTodoListElem(Date.now(), userTodo);
-};
-
-const todoList_init = () => {
-const ReadTodos = localStorageGet( TODO_KEY );
-if( ReadTodos  ){
-  const obj = JSON.parse( ReadTodos );
-  obj.forEach(elem => {
-    createTodoListElem( elem.id , elem.value );
-  });
+const todoList_init =()=>{
+  // localstorage 값을 읽어오기
+  const strRead = localStorage.getItem(TODO_KEY);
+  if( strRead ){
+    const obj = JSON.parse( strRead );
+     obj.forEach(elem => {
+      addTodoList( elem.id, elem.value );
+     });
+    
+    
+  }
+  tagTodoForm.addEventListener('submit', handlerTodoSubmit );
 }
-  tagTodoForm.addEventListener("submit", handlerTodoSubmit);
-};
+todoList_init();
+
+
+

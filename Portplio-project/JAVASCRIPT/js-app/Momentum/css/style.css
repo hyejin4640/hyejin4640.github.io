@@ -12,9 +12,11 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 
+/* mail -wrap */
 .fa-envelope{
   font-size: 3rem;
   position: absolute;
@@ -42,7 +44,7 @@ animation-direction: alternate;
 transform: translateY(3px);
   }
 }
-/* mail -wrap */
+
 .close{
   display: none;
 }
@@ -83,18 +85,20 @@ transform: translateY(3px);
   font-size: 2rem;
   font-weight: bolder;
 }
-/* wrap ***********************************************/
-/* .hidden {
-  display: none;
-} */
 
-.wrap {
+
+
+/* wrap ***********************************************/
+.hidden {
+  display: none;
+}
+
+#wrap {
   width: 50%;
   margin: 10rem auto;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   text-align: center;
-  
 }
 
 button {
@@ -103,12 +107,22 @@ button {
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.7);
 }
-button:hover{
-  background-color: #fff;
-  transform: scale(1.1);
+
+
+.btnclick {
+  animation-name: click;
+  animation-duration: 0.15s;
 }
 
+@keyframes click {
+  0% {
+    transform: translateY(0);
+  }
 
+  100% {
+    transform: translateY(3px);
+  }
+}
 
 input {
   border: none;
@@ -209,10 +223,6 @@ main h2 {
 footer .quote {
   font-size: 2rem;
   word-spacing: -0.2rem;
-  padding: 2rem;
-}
-.quote button{
-  padding: 0.2em 0.8em;
 }
 
 /* outside ***********************************************/
@@ -224,13 +234,13 @@ footer .quote {
   padding-left: 1rem;
 }
 
-.bgVideo video {
+.video_frame video {
   z-index: -1;
   /* before에 배경에그라데이션을보이려면 video태그가z인덱스에서 뒤로가야함 */
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
+  width: 100%;
   /*max-width*/
   min-height: 100%;
   /* min,max는 full로 사이즈를 설정할때 주로사용
