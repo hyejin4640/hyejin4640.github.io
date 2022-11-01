@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+/* mail -wrap */
+.fa-envelope{
+  font-size: 3rem;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  background-color: aliceblue;
+  border-radius: 50%;
+  padding: 1rem;
+  animation-name:mail ;
+  animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+.fa-envelope:hover{
+  background-color: tomato;
+  font-size: 4rem;
+}
+
+@keyframes mail {
+  0%{
+    transform: translateY(-3px);
+  }
+  100%{
+transform: translateY(3px);
+  }
+}
+
+.close{
+  display: none;
+}
+.mailWrap{
+  position: relative;
+  width: 50%;
+  margin: 10rem auto;
+  /* background-color: rgba(256, 255, 255, 0.5); */
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(240, 134, 101);
+  box-shadow: 2px 5px 10px rgb(220, 219, 219);
+  text-align: left;
+  padding: 2rem;
+}
+.mailWrap .box-input {
+  margin: 1rem 0;
+  font-size: 2.2rem;
+}
+.box-input input{
+  padding: 1rem;
+}
+.box-input .btnSend{
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+.mailWrap .xbtn{
+  font-size: 3rem;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+#userMessage{
+  padding: 3rem;
+}
+.thankyou_message{
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+
+
+/* wrap ***********************************************/
+.hidden {
+  display: none;
+}
+
+#wrap {
+  width: 50%;
+  margin: 10rem auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  box-shadow: 3px 3px 3px rgb(178, 178, 178);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.btnclick {
+  animation-name: click;
+  animation-duration: 0.15s;
+}
+
+@keyframes click {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+input {
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*  header ********** */
+header {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+
+
+header .logout {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  padding: 0.5rem 1.2rem;
+  font-size: 2rem;
+}
+
+header .time {
+  font-size: 9rem;
+
+}
+
+header .login-name {
+  font-size: 3rem;
+  font-weight: bold;
+
+}
+
+header #loginForm {
+  padding-top: 2rem;
+}
+
+header #loginForm input {
+  padding: 1rem;
+  font-size: 1.7rem;
+  text-align: center;
+  box-shadow: 3px 3px 3px rgb(179, 178, 178);
+}
+
+header #loginForm button {
+  padding: 0.5rem 1.2rem;
+  margin-left: 3rem;
+  font-size: 2rem;
+}
+
+/* main *******************/
+main {
+  display: flex;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  height: 100%;
+}
+
+main section {
+  width: 40%;
+
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 auto;
+}
+
+#left {
+  border-radius: 10px;
+}
+
+
+#left #todoForm input {
+  font-size: 1.7rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 3px 3px 3px rgb(186, 185, 185);
+  text-align: center;
+  padding: 0.8rem;
+  width: 100%;
+
+}
+
+main h2 {
+  color: #000;
+  border-radius: 10px;
+}
+
+#left .todoList {
+  text-align: justify;
+  padding-left: 0.5rem;
+
+}
+
+#left .todoList li {
+  font-size: 1.8rem;
+}
+
+/*  footer */
+footer .quote {
+  font-size: 2rem;
+  word-spacing: -0.2rem;
+}
+
+/* outside ***********************************************/
+.bg_desc {
+  position: fixed;
+  bottom: 20px;
+  height: 2rem;
+  line-height: 2rem;
+  padding-left: 1rem;
+}
+
+.video_frame video {
+  z-index: -1;
+  /* before에 배경에그라데이션을보이려면 video태그가z인덱스에서 뒤로가야함 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*max-width*/
+  min-height: 100%;
+  /* min,max는 full로 사이즈를 설정할때 주로사용
+  지정한 사이즈보다 더작거나 커질수없음 즉, 100%로설정한사이즈가 가장작은사이즈고
+  더이상 작아질수없음 */
+}
