@@ -11,6 +11,7 @@ const minusHeight = 100;
 
 // json파일로부터 패치API를 사용해 받아온다.
 const loadProjectData = async () => {
+  // 비동기식인fetch를 async를 사용해 동기식으로 사용한다.
   const reponse = await fetch("./data/data.json");
   const json = await reponse.json();
   return json.project;
